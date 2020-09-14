@@ -20,7 +20,7 @@ class OrderSchema extends Schema {
       
 
       table
-      .foreign('user-id')
+      .foreign('user_id')
       .references('id')
       .inTable('users')
       onDelete('cascade')
