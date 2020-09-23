@@ -5,7 +5,7 @@ const Schema = use('Schema')
 
 class CouponSchema extends Schema {
   up () {
-    this.create('coupons', (table) => {
+    this.create('coupons', table => {
       table.increments()
       table.string('code', 100).notNullable()
       table.dateTime('valid_from')

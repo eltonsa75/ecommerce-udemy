@@ -34,7 +34,7 @@ class ProductSchema extends Schema {
       table
       .foreign('product_id')
       .references('id')
-      .inTables('products')
+      .inTable('products')
       .onDelete('cascade')
 
     })
@@ -44,7 +44,7 @@ class ProductSchema extends Schema {
       table.integer('category_id').unsigned()
 
       table
-      .foreign('prduct_id')
+      .foreign('product_id')
       .references('id')
       .inTable('products')
       .onDelete('cascade')
