@@ -1,7 +1,5 @@
 'use strict'
 
-const Factory = require('@adonisjs/lucid/src/Factory')
-
 /*
 |--------------------------------------------------------------------------
 | Factory
@@ -26,7 +24,7 @@ Factory.blueprint('App/Models/User', faker => {
     }
 })
 
-Factory.blueprint('App/Models/Category', fake => {
+Factory.blueprint('App/Models/Category', faker => {
     return {
         title: faker.country({ full: true }),
         description: faker.sentence()
@@ -37,6 +35,6 @@ Factory.blueprint('App/Models/Product', faker => {
     return {
         name: faker.animal(),
         description: faker.sentence(),
-        price: faker.floating({min: 0, max: 100, fixed: 2 })
+        price: faker.floating({min: 0, max: 1000, fixed: 2 })
     }
 })

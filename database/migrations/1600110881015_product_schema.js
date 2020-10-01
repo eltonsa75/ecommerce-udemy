@@ -48,12 +48,18 @@ class ProductSchema extends Schema {
       .references('id')
       .inTable('products')
       .onDelete('cascade')
+
+      table
+      .foreign('category_id')
+      .references('id')
+      .inTable('categories')
+      .onDelete('cascade')
     })
   }
 
   down () {
     this.drop('category_product')
-    this.drop('image_products')
+    this.drop('image_product')
     this.drop('products')
   }
 }
