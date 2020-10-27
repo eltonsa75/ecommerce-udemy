@@ -26,7 +26,7 @@ class ProductController {
     if (name) {
       query.where('name', 'LIKE', `%${name}%`)
     }
-    const products = await query.paginate(pagination. page, pagination.limit)
+    const products = await query.paginate(pagination.page, pagination.limit)
     return response.send(products)
   }
 
@@ -105,7 +105,9 @@ class ProductController {
     const product = await Product.findOrFail(id)
     try {
       await product.delete()
-      return response.status(204).send()
+      return response.status(204).send({
+        message: 'Produto deletado com sucesso!'
+      })
     } catch(error) {
       return response
       .status(500)
