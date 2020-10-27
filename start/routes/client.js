@@ -8,13 +8,13 @@ Route.group(() => {
 /**
  * Product Resource Routes
  */
-Route.resource('product', 'ProductController.index')
+Route.get('products', 'ProductController.index')
 Route.get('products/:id', 'ProductController.show')
 
 /**
  * Order Resource Routes
  */
-Route.resource('orders', 'OrderController.index')
+Route.get('orders', 'OrderController.index')
 Route.get('orders/:id', 'OrderController.show')
 Route.post('order', 'OrderController.store')
 Route.put('orders/:id', 'OrderController.put')
