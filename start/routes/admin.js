@@ -36,3 +36,5 @@ Route.resource('users', 'UserController').apiOnly()
 
 .prefix('v1/admin')
 .namespace('Admin')
+// Definindo as permissões de acesso
+.middleware(['auth', 'is:( admin || manager )'])
