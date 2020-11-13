@@ -16,9 +16,6 @@
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
 const Route = use('Route')
 
-Route.get('/', () => {
-  return {"saudação": "Olá, mundo em JSON"}
-}).as('home')
 /**
  *  Importa as rotas de Autenticação
  */
