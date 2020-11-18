@@ -1,7 +1,7 @@
 'use strict'
 
 const BumblebeeTransformer = use('Bumblebee/Transformer')
-const CouponTransformer = use('App/Transformes/Admin/CouponTransformer')
+const CouponTransformer = use('App/Transformers/Admin/CouponTransformer')
 
 /**
  * DiscountTransformer class

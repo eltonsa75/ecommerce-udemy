@@ -7,7 +7,7 @@
 const Image = use('App/Models/Image')
 const { manage_single_upload, manage_multiple_uploads } = use('App/Helpers')
 const fs = use('fs')
-const Transformer = use('App/Transformes/Admin/ImagemTransformer')
+const Transformer = use('App/Transformers/Admin/ImagemTransformer')
 
 /**
  * Resourceful controller for interacting with images

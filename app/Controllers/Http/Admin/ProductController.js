@@ -5,6 +5,8 @@
 /** @typedef {import('@adonisjs/framework/src/View')} View */
 
 const Product = use('App/Models/Product')
+
+// Implementado o Transformers
 const Transformer = use('App/Transformers/Admin/ProductTransformer')
 
 /**

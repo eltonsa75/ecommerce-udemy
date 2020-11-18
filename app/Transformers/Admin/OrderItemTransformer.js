@@ -1,7 +1,7 @@
 'use strict'
 
 const BumblebeeTransformer = use('Bumblebee/Transformer')
-const ProductTrasformer = use('App/Transformes/Admin/ProductTrasformer')
+const ProductTransformer = use('App/Transformers/Admin/ProductTransformer')
 
 /**
  * OrderItemTransformer class
@@ -25,7 +25,7 @@ class OrderItemTransformer extends BumblebeeTransformer {
   }
 
   includeProduct(orderItem){
-    return this.item(order.getRelated('product'), ProductTrasformer)
+    return this.item(orderItem.getRelated('product'), ProductTransformer)
   }
 }
 

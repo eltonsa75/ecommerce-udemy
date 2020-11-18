@@ -52,6 +52,11 @@ Route.resource('users', 'UserController')
     ])
 )
 
+/**
+ * Dashboard Route
+ */
+Route.get('dashboard', 'DashboardController.index').as('dashboard')
+
 })
 
 .prefix('v1/admin')

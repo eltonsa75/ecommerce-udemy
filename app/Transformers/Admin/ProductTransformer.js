@@ -9,7 +9,7 @@ const ImageTransformer = use('App/Transformers/Admin/ImageTransformer')
  * @constructor
  */
 class ProductTransformer extends TransformerAbstract {
-  defaultInclude(){
+  defaultInclude() {
     return ['image']
   }
   /**

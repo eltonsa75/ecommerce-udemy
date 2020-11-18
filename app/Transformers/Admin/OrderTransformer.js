@@ -2,9 +2,9 @@
 
 const BumblebeeTransformer = use('Bumblebee/Transformer')
 const UserTransformer = use('App/Transformers/Admin/UserTransformer')
-const OrderItemTransforme = use('App/Transformers/Admin/OrderItemTransformer')
+const OrderItemTransformer = use('App/Transformers/Admin/OrderItemTransformer')
 const CouponTransformer = use('App/Transformers/Admin/CouponTransformer')
-const Discounttransformer = use('App/Transformers/Admin/DiscountTransformer')
+const DiscountTransformer = use('App/Transformers/Admin/DiscountTransformer')
 
 /**
  * OrderTransformer class
@@ -21,6 +21,7 @@ class OrderTransformer extends BumblebeeTransformer {
    */
   transform (order) {
     order = order.toJSON()
+    
     return {
      id: order.id,
      status: order.status,
@@ -43,15 +44,15 @@ class OrderTransformer extends BumblebeeTransformer {
   }
 
   includeItems(order){
-    return this.item(order.getRelated('items'), OrderItemTransformer)
+    return this.collection(order.getRelated('items'), OrderItemTransformer)
   }
 
   includeCoupons(order){
-    return this.item(order.getRelated('coupons'), CouponTransformer)
+    return this.collection(order.getRelated('coupons'), CouponTransformer)
   }
 
   includeDiscount(order){
-    return this.item(order.getRelated('discount'), DiscountTransformer)
+    return this.collection(order.getRelated('discount'), DiscountTransformer)
   }
 
 }
